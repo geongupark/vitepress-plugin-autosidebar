@@ -1,7 +1,7 @@
 # vitepress-plugin-autosidebar
 Auto sidebar for vitepress v2
 
-![logo_long]()
+![logo_long](./logo.png)
 ***
 [![npm version](https://badge.fury.io/js/my-awesome-package.svg)](https://badge.fury.io/js/my-awesome-package)
 ![License](https://camo.githubusercontent.com/890acbdcb87868b382af9a4b1fac507b9659d9bf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75652e737667)
@@ -14,7 +14,7 @@ Auto sidebar for vitepress v2
 Install the package using npm:
 
 ```shell
-npm install my-awesome-package
+npm install @geongu.park/vitepress-plugin-autosidebar -D
 ```
 
 ## Usage

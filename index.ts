@@ -13,7 +13,7 @@ function getSidebar(rootPath: string, directoryPath: string, excludeFileName: st
         const filteredFiles = files.filter(file => path.extname(file) === extension && !excludeFileName.includes(path.basename(file, extension)));
         const result = filteredFiles.map(file => ({
           text: path.basename(file, extension),
-          link: path.join(directoryPath, path.basename(file, extension)).replaceAll('\\', '/')
+          link: path.join(directoryPath, path.basename(file, extension)).replace(/\\/gi, "/")
         }));
         console.log(result);
         resolve(result);

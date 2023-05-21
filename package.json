@@ -1,10 +1,11 @@
 {
-  "name": "vitepress-plugin-autosidebar",
-  "version": "1.0.0",
+  "name": "@geongu.park/vitepress-plugin-autosidebar",
+  "version": "1.0.7",
   "description": "The auto side bar for the vitepress v2",
-  "main": "index.ts",
+  "main": "./dist/index.js",
   "scripts": {
-    "vpa:test": "npx jest"
+    "build": "npx tsc",
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
