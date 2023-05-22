@@ -19,13 +19,47 @@ npm install @geongu.park/vitepress-plugin-autosidebar -D
 ```
 
 ## Usage
-
+* simple use
 ```ts
 const rootPath = __dirname;
 const directoryPath = '';
 const excludeFileName = ['README'];
 
 const result = await getSidebar(rootPath, directoryPath, excludeFileName);
+```
+
+* for config.js
+```js
+...
+import { getSidebar } from '@geongu.park/vitepress-plugin-autosidebar'
+const path = require('path');
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig(
+  async () => {
+    return {
+      ...
+      themeConfig: {
+        // https://vitepress.dev/reference/default-theme-config
+        nav: [
+          { text: 'Home', link: '/' },
+          { text: 'TIL', link: '/til/' },
+          { text: 'LAB', link: '/lab/' }
+        ],
+        sidebar: {
+          '/til/': [
+            {
+              text: 'TIL',
+              link: '/til/',
+              items: await getSidebar(path.join(__dirname, '/../'), '/til/'),
+            }
+          ],
+        },
+        ...
+      }
+    };
+  }
+  )
 ```
 
 ## API
